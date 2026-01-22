@@ -84,7 +84,7 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true
   },
-  output: process.env.EXPORT
+  output: 'export',
     ? 'export'
     : process.env.NEXT_BUILD_STANDALONE === 'true'
       ? 'standalone'
