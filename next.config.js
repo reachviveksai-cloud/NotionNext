@@ -84,11 +84,8 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true
   },
-  output: 'export',
-    ? 'export'
-    : process.env.NEXT_BUILD_STANDALONE === 'true'
-      ? 'standalone'
-      : undefined,
+ output: 'export',
+}
   staticPageGenerationTimeout: 120,
 
   // 性能优化配置
