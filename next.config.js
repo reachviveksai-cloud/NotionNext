@@ -1,3 +1,5 @@
+const path = require("path");
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export",
@@ -13,6 +15,14 @@ const nextConfig = {
 
   typescript: {
     ignoreBuildErrors: true,
+  },
+
+  webpack: (config) => {
+    config.resolve.alias["@theme-components"] = path.resolve(
+      __dirname,
+      "theme-components.js"
+    );
+    return config;
   },
 };
 
